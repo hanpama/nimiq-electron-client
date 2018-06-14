@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+dist/
+/*.log
+
+/web.js
+/nimiq.js
+/worker.js
+/worker-wasm.js
+/worker-wasm.wasm

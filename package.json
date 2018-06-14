@@ -1,0 +1,24 @@
+{
+  "name": "nimiq-electron-client",
+  "version": "0.1.0",
+  "description": "Run Nimiq with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "npm run disable-uws && npm run download-nimiq-from-cdn",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "download-nimiq-from-cdn": "curl https://cdn.nimiq.com/web.js > web.js && curl https://cdn.nimiq.com/nimiq.js > nimiq.js && curl https://cdn.nimiq.com/worker.js > worker.js && curl https://cdn.nimiq.com/worker-wasm.js > worker-wasm.js && curl https://cdn.nimiq.com/worker-wasm.wasm > worker-wasm.wasm",
+    "disable-uws": "rm -rf node_modules/uws/* && echo 'module.exports = \"ignored\"' > node_modules/uws/index.js"
+  },
+  "repository": "https://github.com/hanpama/nimiq-electron-client",
+  "author": "Max Choi",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.11.1"
+  },
+  "dependencies": {
+    "@nimiq/core": "^1.1.0"
+  }
+}
