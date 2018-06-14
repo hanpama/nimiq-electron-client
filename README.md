@@ -6,6 +6,14 @@
 
 ![ScreenShot](./screenshot.png)
 
+## Get Started
+
+```sh
+git clone https://github.com/hanpama/nimiq-electron-client
+cd nimiq-electron-client
+npm install
+npm start
+```
 
 ## Concepts
 
